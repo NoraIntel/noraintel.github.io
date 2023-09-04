@@ -14,9 +14,9 @@
     outline: 0;
     font-size: 100%;
     vertical-align: baseline;
-    /* -webkit-user-select: none;
+    -webkit-user-select: none;
     -ms-user-select: none;
-    user-select: none; */
+    user-select: none;
 }
 
 ::selection{
@@ -94,6 +94,10 @@ body {
     color : var(--color-white) ;
     letter-spacing : 2px ;
     transition : all .3s ease ;
+    font: var(--font-title);
+    font-size: medium;
+    font-weight: bolder;
+    text-transform:uppercase;
 }
 .button__text{
     display : flex ;
