@@ -335,16 +335,23 @@ body {
 }
 
 details {
-    border: 1px solid var(--color-white);
+    /* border: 1px solid var(--color-white); */
     border-radius: 0px;
     padding: 0.5em 0.5em 0;
     width: 50vh;
+    margin-top: 10px;
+    filter: grayscale(100%)
+}
+
+details:hover {
+    filter: grayscale(0%)
 }
 
 summary {
     font-weight: bold;
     margin: -0.5em -0.5em 0;
     padding: 0.5em;
+    border-radius: 10px;
 }
 
 details[open] {
@@ -362,7 +369,7 @@ summary::-webkit-details-marker {
 
 summary:before {
 	left: .75rem;
-	content: "↓";
+	content: "🐈";
 	width: 1.75rem;
 	height: 1.75rem;
 	background-color: var(--color-white);
@@ -382,18 +389,27 @@ summary:hover {
 }
 
 details[open] summary:before {
-    content: "→";
+    content: "✨";
 }
 
 summary {
 	list-style: none;
-    font-family: "Sofia Sans";
+    font-family: "Secular One";
     font-size: medium;
+    font-weight: 400;
+    background-color: var(--color-white);
+    color: var(--color-black);
 }
 
 p{
     font-family: "Sofia Sans";
-    font-size: medium;
+    font-weight: 800;
+    font-size: 1.2em;
     text-align: justify;
     text-justify: inter-word;
+    background-color: #363636 ;
+    color: var(--color-white);
+    padding: 10px;
+    margin-top: -8px;
+    
 }
