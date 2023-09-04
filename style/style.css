@@ -52,10 +52,11 @@ body {
   
 .header {
     grid-column: 1 / 5;
-    grid-row: 1;
+    grid-row: 1/2;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10vh;
 }
 
 .logo {
@@ -93,7 +94,7 @@ body {
     width: 100%;
     height: 1px;
     z-index: -1;
-    transition: all .3s ease-out;
+    transition: all .1s ease-out;
 }
   
 .contact  a:hover::before {
@@ -334,12 +335,12 @@ body {
 }
 
 details {
-    border: 1px solid #aaa;
+    border: 1px solid var(--color-white);
     border-radius: 0px;
     padding: 0.5em 0.5em 0;
     width: 50vh;
 }
-  
+
 summary {
     font-weight: bold;
     margin: -0.5em -0.5em 0;
@@ -351,6 +352,48 @@ details[open] {
 }
 
 details[open] summary {
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid var(--color-white);
     margin-bottom: 0.5em;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+summary:before {
+	left: .75rem;
+	content: "↓";
+	width: 1.75rem;
+	height: 1.75rem;
+	background-color: var(--color-white);
+	color: var(--color-black);
+    font-weight: bolder;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+    margin-right: 5px;
+    font-family: "Sofia Sans";
+    font-size: larger;
+}
+
+summary:hover {
+    cursor: pointer;
+}
+
+details[open] summary:before {
+    content: "→";
+}
+
+summary {
+	list-style: none;
+    font-family: "Sofia Sans";
+    font-size: medium;
+}
+
+p{
+    font-family: "Sofia Sans";
+    font-size: medium;
+    text-align: justify;
+    text-justify: inter-word;
 }

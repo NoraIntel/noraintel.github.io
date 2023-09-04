@@ -1,15 +1,11 @@
-const accordion = document.querySelector(".accordion");
-
-accordion.addEventListener("click", (event) => {
-  const target = event.target;
-
-  if (target.tagName === "SUMMARY") {
-    // Close all other open summaries
-    accordion.querySelectorAll(".summary.active").forEach((summary) => {
-      summary.classList.remove("active");
+$(document).ready(function() {
+    // Get all the details elements.
+    const details = $("details");
+  
+    // Close all the details that are not the clicked one.
+    details.each(function() {
+      if ($(this) !== $(event.currentTarget)) {
+        $(this).slideUp(0.5).stop();
+      }
     });
-
-    // Open the clicked summary
-    target.classList.add("active");
-  }
 });
